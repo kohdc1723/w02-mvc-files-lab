@@ -1,0 +1,16 @@
+@model string[]
+@{
+    ViewData["title"] = "Process";
+    string[] filenameWithExtension = Model as string[];
+}
+
+<div>
+    <h2>@ViewData["title"]</h2>
+    <ul>
+        @foreach(string file in Model)
+        {
+            string filenameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(file);
+            <li><a asp-controller="File" asp-action="Content" asp-route-id="@filenameWithoutExtension">@file</a></li>
+        }
+    </ul>
+</div>

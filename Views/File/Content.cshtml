@@ -1,0 +1,10 @@
+@model string
+@{
+    string? title = ViewData["title"] as string;
+    string? content = ViewData["content"] as string;
+}
+
+<div>
+    <h2>@title</h2>
+    <p>@content</p>
+</div>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string[] files = ViewData["files"] as string[];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>@ViewData["name"]</h2>
+    <p>@ViewData["studentNum"]</p>
+    <p>@ViewData["description"]</p>
+</div>
